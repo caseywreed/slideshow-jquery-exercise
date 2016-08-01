@@ -7,8 +7,10 @@ $(document).ready(function () {
     pictures = res.data
     console.log(pictures)
     pictures.forEach( function (picture) {
-      $("#photoOutput").append(`<img src="${picture.images.fixed_height.url}"><h4></h4>`)
+      $("#photoOutput").append(`<img class="loadedPicture" src="${picture.images.fixed_height.url}"><h4></h4>`)
     })
+    $(".loadedPicture").toggleClass("hidden")
+    $(".loadedPicture").eq(0).toggleClass("hidden")
   })
 
   console.log("jQuery is ready")
