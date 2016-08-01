@@ -13,8 +13,6 @@ $(document).ready(function () {
   })
 
   $(".rightButton").click( function () {
-    // if () {}
-
     $(".active").toggleClass("hidden")
     $(".active").next().toggleClass("hidden active")
     $(".active").first().toggleClass("active")
